@@ -6,7 +6,7 @@ function check() {
     if [ -d ~/.cache/qol ]; then
         QOL_CACHE_FOUND = 1
     else
-        unset 
+        unset QOL_CACHE_FOUND
     fi
     #如果没有缓存则创建缓存
     echo "未找到缓存，即将创建新的缓存文件……"
