@@ -4,13 +4,13 @@ function check() {
     #检查缓存是否存在
     echo "正在检查缓存是否存在……"
     if [ -d ~/.cache/qol ]; then
-        QOL_FIND_CACHE = 1
+        QOL_CACHE_FOUND = 1
     else
-        unset QOL_FIND_CACHE
+        unset 
     fi
     #如果没有缓存则创建缓存
     echo "未找到缓存，即将创建新的缓存文件……"
-    if [ QOL_FIND_CACHE != 1 ]; then
+    if [ QOL_CACHE_FOUND != 1 ]; then
         mkdir ~/.cache/qol
 	case QOL_PM in
             (* | "未知")
