@@ -6,13 +6,12 @@ function check() {
     sleep 1
     #如果没有缓存则创建缓存
     if [ ! -f ~/.cache/qol/cache ]; then
-	echo "未找到缓存，即将创建新的缓存文件……"
+	    echo "未找到缓存，即将创建新的缓存文件……"
         mkdir ~/.cache/qol
-	echo "您的软件包管理器：${QOL_PM}"
-	echo "QOL_PM = ${QOL_PM}" >> ~/.cache/qol/cache
-	source /etc/os-release
-	echo "您使用的发行版：${QOL_DISTRO}"
-	echo "QOL_DISTRO = ${QOL_DISTRO}" >> ~/.cache/qol/cache
+	    echo "您的软件包管理器：${QOL_PM}"
+	    echo "QOL_PM=${QOL_PM}" >> ~/.cache/qol/cache
+	    echo "您使用的发行版：${QOL_DISTRO}"
+	    echo "QOL_DISTRO=${QOL_DISTRO}" >> ~/.cache/qol/cache
     fi
 }
 
